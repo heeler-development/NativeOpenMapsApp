@@ -18,6 +18,9 @@ export class NativeOpenMapsApp extends Component<NativeOpenMapsAppProps<CustomSt
                         lat={this.props.lat}
                         lng={this.props.lng}
                         query={this.props.query}
-                        provider={this.props.platform}/>;
+                        provider={this.props.platform}
+                        Icon={this.props.Icon}
+                        IconHeight={this.props.IconHeight}
+                        IconWidth ={this.props.IconWidth}/>;
     }
 }
