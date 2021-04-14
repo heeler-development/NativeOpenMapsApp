@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="heeler.nativeopenmapsapp.NativeOpenMapsApp" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Native Open Maps App</name>
+    <description>React Native Mendix widget to open a phone's Maps App at a specific location with additional functionality</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="caption" type="string" required="false">
+                <caption>Caption</caption>
+                <description>This string will be displayed as a caption. Leave empty to only display icon.</description>
+            </property>
+            <property key="query" type="attribute" required="false">
+                <caption>Query</caption>
+                <description>Query string used to search for a specific location (i.e. Buckingham Palace). Note- if entered, this behavior will trump Lat, Lng search for google maps. Leave empty if not using</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+            </property>
+            <property key="lat" type="attribute" required="false">
+                <caption>Latitude</caption>
+                <description>Enter Latitude. Leave empty if not using.</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                        <attributeType name="Decimal"/>
+                    </attributeTypes>
+            </property>
+            <property key="lng" type="attribute" required="false">
+                <caption>Longitude</caption>
+                <description>Enter Longitude.  Leave empty if not using.</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                        <attributeType name="Decimal"/>
+                    </attributeTypes>
+            </property>
+            <property key="platform" type="enumeration" required="true" defaultValue="os">
+                <caption>Maps Platform To Use</caption>
+                <description>Choose the Maps app that you would like to use if there is a preference</description>
+                    <enumerationValues>
+                        <enumerationValue key="os">Device OS</enumerationValue>
+                        <enumerationValue key="google">Google</enumerationValue>
+                        <enumerationValue key="apple">Apple</enumerationValue>
+                    </enumerationValues>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
