@@ -12,15 +12,15 @@
                 <caption>Caption</caption>
                 <description>This string will be displayed as a caption. Leave empty to only display icon.</description>
             </property>
-            <property key="Icon" type="image" required="false">
+            <property key="icon" type="image" required="false">
                 <caption>Icon Image</caption>
                 <description>Clickable Icon</description>
             </property>
-            <property key="IconHeight" type="integer" defaultValue="30">
+            <property key="iconHeight" type="integer" defaultValue="30">
                 <caption>Icon Height</caption>
                 <description>Sets the height of the Icon</description>
             </property>
-            <property key="IconWidth" type="integer" defaultValue="30">
+            <property key="iconWidth" type="integer" defaultValue="30">
                 <caption>Icon Width</caption>
                 <description>Sets the width of the Icon</description>
             </property>

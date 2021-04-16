@@ -11,9 +11,9 @@ export interface NativeOpenMapsAppProps<Style> {
     name: string;
     style: Style[];
     caption: string;
-    Icon?: DynamicValue<NativeImage>;
-    IconHeight: number;
-    IconWidth: number;
+    icon?: DynamicValue<NativeImage>;
+    iconHeight: number;
+    iconWidth: number;
     query?: EditableValue<string>;
     lat?: EditableValue<string | BigJs.Big>;
     lng?: EditableValue<string | BigJs.Big>;
@@ -24,9 +24,9 @@ export interface NativeOpenMapsAppPreviewProps {
     class: string;
     style: string;
     caption: string;
-    Icon: string;
-    IconHeight: number | null;
-    IconWidth: number | null;
+    icon: string;
+    iconHeight: number | null;
+    iconWidth: number | null;
     query: string;
     lat: string;
     lng: string;
