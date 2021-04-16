@@ -18,15 +18,26 @@ export interface OpenMapProps {
     lng?: EditableValue<string | BigJs.Big>;
     provider: PlatformEnum;
     Icon?: DynamicValue<NativeImage>;
-    IconHeight?: number;
-    IconWidth?: number;
+    IconHeight: number;
+    IconWidth: number;
 }
 
 
 const defaultStyle: CustomStyle = {
-    container: {},
+    container: {
+        justifyContent:'center',
+        alignItems:'center',
+        flexDirection:'column',
+        flex: 1,
+        marginTop: 5,
+        marginBottom: 5
+        
+    },
     label: {
-        color: "#F6BB42"
+        color: 'black',
+        textAlign: 'center',
+        fontWeight: '600'
+        
     }
 };
 
@@ -39,6 +50,7 @@ const defaultStyle: CustomStyle = {
 
 export class OpenMaps extends Component<OpenMapProps> {
     private readonly styles = mergeNativeStyles(defaultStyle, this.props.style);
+    
     
 
     openMap = () => {
@@ -64,12 +76,13 @@ export class OpenMaps extends Component<OpenMapProps> {
         return (
             <View style={this.styles.container}>
                 <TouchableOpacity onPress={this.openMap}>
-                    <Image source={this.props.Icon?.value} style={{height: this.props.IconHeight || 30, width: this.props.IconWidth || 40}}/>
-                    <Text>{typeof this.props.Icon?.value}</Text>
+                    <Image source={this.props.Icon?.value} 
+                           style={{height: this.props.IconHeight, 
+                                   width: this.props.IconWidth, 
+                                   alignSelf: 'center'}}/>
+                    <Text style={this.styles.label}>{this.props.name}</Text>
                 </TouchableOpacity>
-                
-
-            </View>
+           </View>
         );
     }
 }
