@@ -3,6 +3,8 @@
 
 ## Features
 #### Opens a device's native Maps app to allow a user to easily get directions through an interface they're familiar with
+#### Behavior of the widget's search parameters can be found below
+#### https://www.npmjs.com/package/react-native-open-maps
 
 ## Usage
 #### 1. Clone Repo

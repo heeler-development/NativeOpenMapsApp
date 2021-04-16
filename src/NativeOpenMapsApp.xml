@@ -7,7 +7,7 @@
     <description>React Native Mendix widget to open a phone's Maps App at a specific location with additional functionality</description>
     <icon/>
     <properties>
-        <propertyGroup caption="General">
+        <propertyGroup caption="Device Interface">
             <property key="caption" type="string" required="false">
                 <caption>Caption</caption>
                 <description>This string will be displayed as a caption. Leave empty to only display icon.</description>
@@ -24,16 +24,18 @@
                 <caption>Icon Width</caption>
                 <description>Sets the width of the Icon</description>
             </property>
+        </propertyGroup>
+        <propertyGroup caption="Location Parameters">
             <property key="query" type="attribute" required="false">
                 <caption>Query</caption>
-                <description>Query string used to search for a specific location (i.e. Buckingham Palace). Note- if entered, this behavior will trump Lat, Lng search for google maps. Leave empty if not using</description>
+                <description>Query string used to search for a specific location (i.e. Buckingham Palace). Leave empty if not using</description>
                     <attributeTypes>
                         <attributeType name="String"/>
                     </attributeTypes>
             </property>
             <property key="lat" type="attribute" required="false">
                 <caption>Latitude</caption>
-                <description>Enter Latitude. Leave empty if not using.</description>
+                <description>Enter Latitude. Validate format in app if using string field. Using Lat,Lon will trump Query string. Leave empty if not using.</description>
                     <attributeTypes>
                         <attributeType name="String"/>
                         <attributeType name="Decimal"/>
@@ -41,7 +43,7 @@
             </property>
             <property key="lng" type="attribute" required="false">
                 <caption>Longitude</caption>
-                <description>Enter Longitude.  Leave empty if not using.</description>
+                <description>Enter Longitude. Validate format in app if using string field. Using Lat,Lon will trump Query string. Leave empty if not using.</description>
                     <attributeTypes>
                         <attributeType name="String"/>
                         <attributeType name="Decimal"/>
